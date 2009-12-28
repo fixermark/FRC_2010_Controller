@@ -1,0 +1,288 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>FIRST Robotics Competition 2010 Software Readme</title>
+<style type="text/css">
+/***************************************************/
+/* MINIMAL STYLES */
+/* The following section defines styles that every HTML Help project should need. */
+
+/* Specifies White Background color */
+body {background-color:#ffffff}
+
+/* The default style of P is red to alert you that you need to apply a style class, such as Body. */
+P { margin-top:6.00pt; margin-bottom:6.00pt; font-family:Verdana; font-size:8pt; color: #000000; }
+
+BR { font-size:4.00pt; }
+
+H1,H2,H3,H4,H5,H6 { color:#000000 }
+
+/* Use H1 for all topic headings. */
+H1 { margin-top:3.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:12pt; font-weight:bold;  }
+
+/* Use H2 for second-level headings. */
+H2 { margin-top:9.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:10pt; font-weight:bold;  }
+
+/* Use H3 for third-level headings. */
+H3 { margin-top:6.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; font-weight:bold;  }
+
+/* Use H4 for fourth-level headings. */
+H4 { margin-top:3.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; font-weight:bold;  }
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+H5 { margin-top:3.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; font-weight:bold;  }
+H6 { margin-top:3.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; font-weight:bold;  }
+
+/* Use the Body style class for normal paragraphs. */
+P.Body { margin-top:6.00pt; margin-bottom:6.00pt; font-family:Verdana; font-size:8pt; color:#000000;  }
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+P.Anchor { margin-top:6.00pt; margin-bottom:6.00pt; font-family:Verdana; font-size:10pt; color:#000000;  }
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use <br></br> to start the new paragraph within the same set of <li></li> tags. If you need to indent a list within another list, nest the indented list within the first list's set of <ol></ol> or <ul></ul> tags. */
+P.Indent1 { margin-left:12.00pt; margin-top:6.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; color:#000000;  }
+P.Indent2 { margin-left:24.00pt; margin-top:6.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; color:#000000;  }
+P.Indent3 { margin-left:36.00pt; margin-top:6.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; color:#000000;  }
+
+/* Use the LI style for all list items. */
+LI { margin-top:3.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; color:#000000; }
+
+
+
+/* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+OL { margin-left:18.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; font-family:Verdana; font-size:8pt; color:#000000; list-style-type: decimal; }
+
+/* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+ol ol {list-style-type:lower-alpha}
+ol ol ol {list-style-type:decimal}
+ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol {list-style-type:lower-alpha}
+ol ol ol ol ol ol ol {list-style-type:decimal}
+ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+
+
+/* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+OL.EquationNum { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; font-family:Verdana; font-size:8pt; color:#000000; list-style-type: decimal; }
+
+/* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+OL.List-abc { margin-left:18.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; font-family:Verdana; font-size:8pt; color:#000000; list-style-type:lower-alpha; }
+
+/* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+UL { margin-left:12.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; font-family:Verdana; font-size:8pt; color:#000000;}
+
+/* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+UL.List-Box { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; font-family:Verdana; font-size:8pt; color:#000000; list-style-type: square; }
+
+/* Use the Platform format to denote a specific platform. */
+.Platform { color: #0000FF; font-weight: bold; }
+
+/* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+Table.Borderless { border:none; }
+
+/* Use the Bordered style class for tables that need borders. */
+Table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+
+/* Use the Borderless-Wide style class for tables that do not need borders and that you want to stretch to fill the entire topic width. */
+Table.Borderless-Wide { border:none; width:100%; }
+
+/* Use the Bordered-Wide style class for tables that need borders and that you want to stretch to fill the entire topic width. */
+Table.Bordered-Wide { border-width: 1pt; border-style: solid; border-color: #000000; width:100%; border-collapse: collapse; }
+
+/* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+TD { font-family:Verdana; font-size:8pt; color:#000000; vertical-align:top; padding:3px; }
+
+/* Use the Bordered style class for table cells in Bordered or Bordered-Wide tables. */
+TD.Bordered { font-family:Verdana; font-size:8pt; color:#000000; vertical-align:top; border-width: 1pt; border-style: solid; border-color: #000000; }
+
+/* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+TD.Icon { width:40px; vertical-align:top; }
+
+/* Use the Table-cell-8pt style class for table cells in tables that contain a lot of information and need smaller text to fit it all on one screen to prevent a horizontal scroll bar from appearing. */
+TD.Table-cell-8pt { font-family:Verdana; font-size:7pt; color:#000000;  }
+
+/* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+TH { font-family:Verdana; font-size:8pt; color:#000000; font-weight:bold; padding:3px; }
+
+/* Use the Bordered style class for table heading cells in Bordered or Bordered-Wide tables. */
+TH.Bordered { font-family:Verdana; font-size:8pt; color:#000000; font-weight:bold;  border-width: 1pt; border-style: solid; border-color: #000000; }
+
+/* Use the Table-cell-8pt style class for table heading cells in tables that contain a lot of information and need smaller text to fit it all on one screen to prevent a horizontal scroll bar from appearing. */
+TH.Table-Head-8pt { font-family:Verdana; font-size:7pt; color:#000000; font-weight:bold; }
+
+/* Use the Left-Align style class for table heading cells that you want to left align instead of center align. */
+TH.Left-Align { font-family:Verdana; font-size:8pt; color:#000000; font-weight:bold; padding:3px; text-align:left; }
+
+/***************************************************/
+/* CHARACTER FORMATS */
+/* The following section defines character formats that every HTML Help project should need. */
+
+/* Use the Dark-Red format for warnings or cautions. */
+#Dark-Red { color: #800000 }
+
+/* Use the Monospace format for code or syntax examples. */
+#Monospace { font-family: "Courier New"; font-size: 8pt; }
+
+/* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+#Monospace-Bold { font-family: "Courier New"; font-size: 8pt; font-weight: bold; }
+
+/* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+#Monospace-Italic { font-family: "Courier New"; font-size: 8pt; font-style: italic; }
+
+/* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+#Symbol { font-family: Symbol; font-size: 8pt; }
+
+/* The following styles define the color of links. */
+a:link { color: #007700 }
+a:hover { color: #FF0000 }
+a:active { color: #FF0000 }
+a:visited { color: #7F007F }
+
+/***************************************************/
+/* ACTIVITY STYLES */
+/* The following section defines styles that only tutorial-style HTML Help projects should need. */
+
+/* Use the Activity-Objective style class for the objective at the beginning of an activity topic. */
+H3.Activity-Objective { color: #800000; }
+
+/***************************************************/
+/* CODE STYLES */
+/* The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+
+P.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family:"Courier New"; font-size:8pt; color:#000000;  }
+P.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:"Courier New"; font-size:8pt; color:#000000;  }
+P.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:"Courier New"; font-size:8pt; color:#000000;  }
+P.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:"Courier New"; font-size:8pt; color:#000000;  }
+
+/***************************************************/
+/* FUNCTION STYLES */
+/* The following section defines styles that you might need to format function reference help. */
+
+P.F-VI-Code4 { margin-left:48.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:"Courier New"; font-size:8pt; color:#000000;  }
+P.F-VI-Code5 { margin-left:60.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:"Courier New"; font-size:8pt; color:#000000;  }
+P.F-VI-Equation { margin-top:9.00pt; margin-bottom:9.00pt; font-family:Verdana; font-size:8pt; color:#000000;  }
+
+OL.F-VI-EquationNum { margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; font-family:Verdana; font-size:8pt; color:#000000; list-style-type: decimal; }
+</style>
+</HEAD>
+<body>
+
+<h1>FIRST Robotics Competition 2010 Software Readme</h1>
+<p class="Body">October 2009</p>
+
+<p class="Body">This file contains information to introduce you to the <em>FIRST</em> Robotics Competition (FRC) 2010 Software. This file also provides you with help resources you can use while working with the FRC software.</p>
+
+<p class="Body">This file contains the following information that you need to understand.</p>
+
+<p class="Body"><a href="#overview">Overview</a></p>
+<p class="Body"><a href="#features">New Features and Changes</a></p>
+<p class="Body"><a href="#requirements">System Requirements</a></p>
+<p class="Body"><a href="#installation">Installation and Activation Instructions</a></p>
+<p class="Body"><a href="#help">Accessing the Help</a></p>
+<p class="Body"><a href="#examples">Finding Examples</a></p>
+<p class="Body"><a href="#known">Known Issues</a></p>
+<p class="Body"><a href="#bug">Bug Fixes</a></p>
+<p class="Body"><a href="#trouble">Troubleshooting Issues</a></p>
+<p class="Body"><a href="#doc">Documentation Updates and Additions</a></p>
+<hr>
+
+<h2><a name="overview">Overview</a></h2>
+<p class="Body">The FRC 2010 software includes three separate programming environments: LabVIEW&#8482;, Wind River&#174; Workbench, and the Sun&#8482; SPOT Java&#8482; Development Kit for FRC. Use any of these environments to develop the robotics program you want to run on the CompactRIO device. Use LabVIEW to program a robot in the LabVIEW graphical programming environment or to develop a desktop application. Use Wind River Workbench to program a robot in C or C&#43;&#43;. Use the Sun SPOT JDK to program a robot in Java.</p>
+
+<h2><a name="features">New Features and Changes</a></h2>
+<p class="Body">Refer to the <em>FIRST</em> Web site at <a href="http://www.usfirst.org/roboticsprograms/frc/content.aspx?id=10934">www.usfirst.org/frccontrolsystem</a> for up-to-date information about new features and changes in all three programming environments in the <em>FIRST</em> Robotics Competition 2010 software.</p>
+
+<h2><a name="requirements">System Requirements</a></h2>
+
+<p class="Body">LabVIEW supports Windows Vista/XP/2000.</p>
+<p class="Body">Wind River Workbench supports Windows XP Professional for (32-bit), Service Pack 2 and Windows Vista Business for (32-bit), Service Pack 1.
+<p class="Body"</p>
+<p class="Body">Sun SPOT JDK supports Windows Vista/XP/2000.</p>
+
+<p class="Body">If you use LabVIEW to program a robot, refer to the <em>LabVIEW Release Notes</em>, available by navigating to the <span id="Monospace">National Instruments\LabVIEW 8.6\manuals</span> directory and opening <span id="Monospace">LV_Release_Notes.pdf</span>, for a complete list of system requirements.</p>
+
+<p class="Body">If you use C or C&#43;&#43; to program a robot, refer to the Wind River FRC Readme, available by navigating to the <span id="Monospace">WindRiver</span> directory and opening <span id="Monospace">readme.txt</span>. Refer to this readme for information about the Wind River software.</p>
+
+
+<h2><a name="installation">Installation and Activation Instructions</a></h2>
+
+<p class="Body">Refer to the <em>FIRST Robotics Competition Software Release Notes</em> for information about installing and activating the FRC software. This printed document is part of the FRC software kit.</p>
+
+<p class="Body">After you install the FRC software from the <em>FIRST</em> Robotics Competition Software DVDs, you MUST download and install the mandatory FRC software update from the <em>FIRST</em> Web site at <a href="http://www.usfirst.org/roboticsprograms/frc/content.aspx?id=10934">www.usfirst.org/frccontrolsystem</a>. You do not need to install previous FRC software updates first.</p>
+
+<h2><a name="help">Accessing the Help</a></h2>
+
+<p class="Body">The following documents contain information that you may find helpful as you use the FRC software.</p>
+
+<p class="Body">If you use LabVIEW to program the robot, refer to the following documents:</p>
+
+<ul>
+<li><em>Getting Started with LabVIEW for the FIRST Robotics Competition</em>&#8212;Use this manual to learn about the LabVIEW graphical programming environment and the basic LabVIEW features you can use to build FRC applications. Access this manual by navigating to the <span id="Monospace">National Instruments\LabVIEW 8.6\manuals</span> directory and opening <span id="Monospace">FRC_Getting_Started.pdf</span>. You also can access this manual from the <strong>Getting Started</strong> window.</li>
+
+<li><em>LabVIEW Robotics Programming Guide for the FIRST Robotics Competition</em>&#8212;Use this manual to learn robotics programming concepts, reference information about <em>FIRST</em> Robotics Competition VIs, and guidelines for troubleshooting in LabVIEW. Access this manual by navigating to the <span id="Monospace">National Instruments\LabVIEW 8.6\manuals</span> directory and opening <span id="Monospace">FRC_Programming_Guide.pdf</span>. You also can access this manual from the <strong>Getting Started</strong> window.</li>
+
+<li><em>LabVIEW Help</em>&#8212;Use the <em>LabVIEW Help</em> to access information about LabVIEW programming concepts, step-by-step instructions, and reference information. The <em>LabVIEW Help</em> also contains information about the <em>FIRST</em> Robotics Competition VIs and dialog boxes. Access the <em>LabVIEW Help</em> by selecting <strong>Help&#0187;Search the LabVIEW Help</strong>.</li>
+</ul>
+
+<p class="Body">If you use Wind River Workbench to program the robot, refer to the following documents to get started building an application for FRC:</p>
+
+<ul>
+<li><em>C/C&#43;&#43; Programming Guide for the FIRST Robotics Competition</em>&#8212;Use this manual to learn robotics programming concepts, reference information about the WPI Robotics Library, and guidelines for troubleshooting in Wind River Workbench. Access this manual by navigating to the <span id="Monospace">WindRiver\docs\extensions\FRC</span> directory and opening <span id="Monospace">C Programming Guide for FRC.pdf</span>.</li>
+<li><em>Wind River Workbench User's Guide</em>&#8212;Use the <em>Wind River Workbench User's Guide</em> to learn about building and debugging an application in the Wind River programming environment. Access the <em>Wind River Workbench User's Guide</em> by selecting <strong>Help&#0187;Help Contents</strong> in Wind River and navigating to the <strong>Wind River Documentation&#0187;Guides&#0187;Host Tools&#0187;Wind River Workbench User's Guide 3.0, VxWorks Version</strong> book on the <strong>Contents</strong> tab of the <em>Help &#8211; Wind River Workbench help</em> window.</li>
+</ul>
+
+<p class="Body">If you use the Sun SPOT JDK to program the robot, refer to the following documents to get started building an application for FRC:</p>
+<ul>
+<li><em>Release Notes for Java Programming</em>&#8212;Use these release notes to access information about installing the WPILib Sun SPOT JDK extensions you can use to program a robot in Java. Access these release notes by navigating to the <span id="Monospace">FRCJava</span> directory and opening <span id="Monospace">Release notes for Java programming.pdf</span>.</li>
+<li><em>C and Java Programming Guide for FRC</em>&#8212;Use this guide to learn robotics programming concepts in Java, reference information about the WPI Robotics Library, and guidelines for troubleshooting in Java. Access this guide by navigating to the <span id="Monospace">FRCJava</span> directory and opening <span id="Monospace">C and Java Programming Guide for FRC.pdf</span>.</li></ul>
+
+<h2><a name="examples">Finding Examples</a></h2>
+
+<p class="Body">Refer to the <span id="Monospace">National Instruments\LabVIEW 8.6\examples\FRC</span> directory for example VIs that demonstrate common tasks using the FRC software. You can modify an example VI to fit an application, or you can copy and paste from one or more examples into a VI you create.</p>
+
+<p class="Body">Refer to the <em>C/C&#43;&#43; Programming Guide for the FIRST Robotics Competition</em>, accessible by navigating to the <span id="Monospace">WindRiver\docs\extensions\FRC</span> directory and opening <span id="Monospace">C Programming Guide for FRC.pdf</span>, for example programs.</p>
+
+<p class="Body">Refer to the <em>C and Java Programming Guide for FRC</em>, accessible by navigating to the <span id="Monospace">FRCJava</span> directory and opening <span id="Monospace">C and Java Programming Guide for FRC.pdf</span>, for example programs.</p>
+
+
+<h2><a name="known">Known Issues</a></h2>
+
+
+<p class="Body">You can access the LabVIEW for FRC 2010 software and documentation known issues list online. Refer to the <a href="http://digital.ni.com/express.nsf/express?openagent&code=LVFRC2010KIL">National Instruments Web site</a> for an up-to-date list of known issues in the FRC 2010 software.</p>
+<p class="Body">Refer to the <em>FIRST</em> Web site at <a href="http://www.usfirst.org/roboticsprograms/frc/content.aspx?id=10934">www.usfirst.org/frccontrolsystem</a> for up-to-date information about known issues in all three programming environments in the <em>FIRST</em> Robotics Competition 2010 software.</p>
+
+<h2><a name="bug">Bug Fixes</a></h2>
+<p class="Body">Refer to the <em>FIRST</em> Web site at <a href="http://www.usfirst.org/roboticsprograms/frc/content.aspx?id=10934">www.usfirst.org/frccontrolsystem</a> for up-to-date information about bug fixes in all three programming environments in the <em>FIRST</em> Robotics Competition 2010 software.</p>
+
+
+<h2><a name="trouble">Troubleshooting Issues</a></h2>
+<p class="Body">Refer to Chapter 7, <em>Troubleshooting the FRC Robot</em>, of the <em>LabVIEW Robotics Programming Guide for the FIRST Robotics Competition</em>, accessible by navigating to the <span id="Monospace">National Instruments\LabVIEW 8.6\manuals</span> directory and opening <span id="Monospace">FRC_Programming_Guide.pdf</span>, for information about troubleshooting in LabVIEW.
+
+<p class="Body">Refer to the <em>C/C&#43;&#43; Programming Guide for the FIRST Robotics Competition</em>, accessible by navigating to the <span id="Monospace">WindRiver\docs\extensions\FRC</span> directory and opening <span id="Monospace">C Programming Guide for FRC.pdf</span>, for information about troubleshooting in Wind River Workbench.</p>
+
+<p class="Body">Refer to the <em>C and Java Programming Guide for FRC</em>, accessible by navigating to the FRCJava directory and opening <span id="Monospace">C and Java Programming Guide for FRC.pdf</span>, for information about troubleshooting in the Sun SPOT JDK.</p>
+
+<h2><a name="doc"></a>Documentation Updates and Additions</h2>
+
+<p class="Body">The following items are corrections to the LabVIEW documentation for the <em>FIRST</em> Robotics Competition:</p>
+<ul>
+<li>The <strong>Add to the block diagram</strong> and <strong>Find on the palette</strong> buttons in the Read VI help topic do not add or find the correct VI. You can find the Read VI by navigating to the <strong>Functions&#0187;WPI Robotics Library&#0187;DriverStation&#0187;Network Variable</strong> palette.</li>
+<li>The <strong>Variable Name</strong> input of the Create VI and the Subscribe VI is always a required input.</li>
+<li>The description of the <strong>Variable Reference Out</strong> output of the Read VI and the Update VI should read Variable Reference Out.</li>
+</ul>
+
+<hr>
+
+<p class="Body"><strong>Copyright</strong></p>
+<p class="Body">&#0169; 2008&#8211;2009 National Instruments Corporation. All rights reserved.</p>
+<p class="Body">Under the copyright laws, this publication may not be reproduced or transmitted in any form, electronic or mechanical, including photocopying, recording, storing in an information retrieval system, or translating, in whole or in part, without the prior written consent of National Instruments Corporation.</p>
+
+<p class="Body"><strong>Trademarks</strong></p>
+<p class="Body">National Instruments, NI, <span id="Monospace">ni.com</span>, and LabVIEW are trademarks of National Instruments Corporation. Refer to the <em>Terms of Use</em> section on <span id="Monospace">ni.com/legal</span> for more information about National Instruments trademarks. Other product and company names mentioned herein are trademarks or trade
+names of their respective companies.</p>
+
+<p class="Body"><strong>Patents</strong></p>
+<p class="Body">For patents covering the National Instruments products, refer to the appropriate location: <strong>Help&#0187;Patents</strong> in your software, the <span id="Monospace">patents.txt</span> file on your media, or <a href="http://www.ni.com/patents" target="_blank">ni.com/patents</a>.</p>
+
+</body>
+</html>

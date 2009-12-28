@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<suiteDefinition xmlns="NIMetaSuite" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="NIMetaSuite MetaSuiteDefinition.xsd">
+
+  <suiteId GUID="" version=""/>
+
+  <distribution id="VDMPatch">
+    <inputRoot suiteVolume="1">Distributions\Vision Assistant 2009 Hotfix\</inputRoot>
+    <installOrder>1651</installOrder>
+    <EULAId>None</EULAId>
+    <distributionType>ADE</distributionType>
+    <displayFolderId>Dependencies_Package</displayFolderId>
+    <name language="0009">Vision Assistant 2009 Hotfix</name>
+    <description language="0009">Vision Assistant 2009 Hotfix</description>
+    <nonNIDistInfo>
+      <executable>Distributions\Vision Assistant 2009 Hotfix\VisionAssistant2009Hotfix.exe</executable>
+    </nonNIDistInfo>
+  </distribution>
+
+  <distribution id="VISIONPLUGIN">
+    <distId GUID="{AC67DC66-9136-4541-8C50-2976C2DD231F}" languages="0009" version="9.0.0"/>
+    <inputRoot suiteVolume="1">Distributions\Vision Plugin for FRC\</inputRoot>
+    <installOrder>1701</installOrder>
+    <EULAId>NIStandardReleased</EULAId>
+    <distributionType>ADE</distributionType>
+    <displayFolderId>Dependencies_Package</displayFolderId>
+    <name language="0009">Vision Plugin</name>
+    <description language="0009">Version 9.0.0\n\nInstalls the Vision Assistant Axis camera plugin for the FIRST Robotics Competition.</description>
+    <installOptionSetId>NoCustomInstall</installOptionSetId>
+    <requiredDistId>VDM2009</requiredDistId>
+    <setupExeVersion>2.7.0.346</setupExeVersion>
+    <activation/>
+    <products>
+      <product UPC="{47D2E487-8D10-4E7E-82A9-86CED1962A8C}" UPV="9.0.0"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{5B0CB826-E499-4E6B-94F0-75B6327ED934}"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{BE400A3D-E9D6-48D9-AF14-337722A11D40}"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{1BEBED5E-7F4F-4C30-8C65-B2184919759A}"/>
+    </products>
+  </distribution>
+
+  <distribution id="FRC_CORE">
+    <distId GUID="{A5911192-D86D-442D-B2F0-07F60F2C504B}" languages="0009" version="8.6.1"/>
+    <inputRoot suiteVolume="1">Distributions\FRC Core\</inputRoot>
+    <installOrder>1800</installOrder>
+    <EULAId>FIRST Team Competition</EULAId>
+    <distributionType>ADE</distributionType>
+    <displayFolderId>LabVIEW_Package</displayFolderId>
+    <name language="0009">FRC Additional Files for LabVIEW</name>
+    <description language="0009">Version 8.6.1\n\nInstalls LabVIEW functionality specific to the FIRST Robotics Competition.</description>
+    <setupExeVersion>2.7.0.346</setupExeVersion>
+    <activation/>
+    <products>
+      <product UPC="{EB03BA35-5195-47E5-8D7F-8B0E76F8F330}" UPV="8.6.1"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{5B0CB826-E499-4E6B-94F0-75B6327ED934}"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{BE400A3D-E9D6-48D9-AF14-337722A11D40}"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{1BEBED5E-7F4F-4C30-8C65-B2184919759A}"/>
+    </products>
+  </distribution>
+
+  <distribution id="FRCLICENSE">
+    <distId GUID="{9185AC58-6F3D-4B4D-8B85-89B0BE37A0F5}" languages="0009" version="8.6.1"/>
+    <inputRoot suiteVolume="1">Distributions\FRC License\</inputRoot>
+    <installOrder>1911</installOrder>
+    <serialGroupId>FRC</serialGroupId>
+    <EULAId>NIStandardReleased</EULAId>
+    <distributionType>ADE</distributionType>
+    <displayFolderId>Dependencies_Package</displayFolderId>
+    <name language="0009">FRC License</name>
+    <description language="0009">Installs license files required to use FRC 2010 software.</description>
+    <setupExeVersion>2.7.0.346</setupExeVersion>
+    <activation>
+      <licensedProduct version="8.6.1">LabVIEW_FRC_PKG</licensedProduct>
+    </activation>
+    <products>
+      <product UPC="{08293447-2738-4019-BD12-9801D7D42B3F}" UPV="8.6.1"/>
+      <product UPC="{C714057F-12F0-417F-AF7E-C96F2FF139BE}" UPV="8.6.0"/>
+      <product UPC="{99D796C3-2E53-4839-A25B-22C26B029103}" UPV="8.6"/>
+      <product UPC="{A44FC0A9-D76D-4143-8273-96CB4336380E}" UPV="1.0.1"/>
+      <product UPC="{42B2AB84-704E-4BF1-B428-67212E6F7A2E}" UPV="8.6.1"/>
+      <product UPC="{6277CED1-7132-453B-B536-A52712CEC5A7}" UPV="5.0.0"/>
+      <product UPC="{A3842A3B-E327-4F68-BEFF-552BE6206AA4}" UPV="5.0.0"/>
+      <product UPC="{FB99B180-68F3-4D20-A3B7-CABFEDAB7F59}" UPV="1.0.0"/>
+      <product UPC="{FCF64B73-B7D4-4971-8F11-24BAF7CC3E6C}" UPV="8.6"/>
+      <product UPC="{4CD11BE6-6BB7-4082-8A27-C13771BC309B}" UPV="1.2.0"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{5B0CB826-E499-4E6B-94F0-75B6327ED934}"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{BE400A3D-E9D6-48D9-AF14-337722A11D40}"/>
+      <product ProductVersion="2.70.346" UpgradeCode="{1BEBED5E-7F4F-4C30-8C65-B2184919759A}"/>
+      <product ProductVersion="1.0.10" UpgradeCode="{B16EFD90-0A78-4C21-B8AC-C8D77A650D05}"/>
+      <product ProductVersion="1.0.10" UpgradeCode="{0058F63B-2BD1-4BEF-89BC-DAA74C726870}"/>
+      <product ProductVersion="1.0.861.0" UpgradeCode="{54809C09-9598-43F3-8056-A7E634605F67}"/>
+      <product ProductVersion="3.4.28" UpgradeCode="{CBA7EDB3-A142-43B6-B68B-A723624F1375}"/>
+    </products>
+  </distribution>
+
+  <volumeInfo currentIndex="1">
+    <volume id="{9C50F91B-8327-4026-B944-2310F3FF8F9C}" index="1">
+      <volumeLabel>FRCUPDATE</volumeLabel>
+      <diskPrompt language="0009">FRC 2010 Update Suite</diskPrompt>
+    </volume>
+  </volumeInfo>
+
+  <serialGroup id="FRC">
+    <name language="0009">LabVIEW 8.6.1 for FIRST Robotics Competition 2010</name>
+  </serialGroup>
+
+  <directory id="DEFAULT">
+    <description language="0009">DEFAULT</description>
+  </directory>
+
+  <EULA id="NIStandardReleased">
+    <file displayName="NI" language="0009">Licenses\NI Released License Agreement - English.rtf</file>
+    <file displayName="NI" language="0010">Licenses\NI Released License Agreement - Spanish.rtf</file>
+    <file displayName="NI" language="0016">Licenses\NI Released License Agreement - Italian.rtf</file>
+    <file displayName="NI" language="0007">Licenses\NI Released License Agreement - German.rtf</file>
+    <file displayName="NI" language="0012">Licenses\NI Released License Agreement - French.rtf</file>
+    <file displayName="NI" language="0017">Licenses\NI Released License Agreement - Japanese.rtf</file>
+    <file displayName="NI" language="0018">Licenses\NI Released License Agreement - Korean.rtf</file>
+    <file displayName="NI" language="2052">Licenses\NI Released License Agreement - Simplified Chinese.rtf</file>
+  </EULA>
+
+  <EULA id="FIRST Team Competition">
+    <file displayName="FIRST Competition" language="0009">Licenses\FIRST Team Competition License Agreement - English.rtf</file>
+  </EULA>
+
+  <displayFolder id="LabVIEW_Package">
+    <displayName language="0009">LabVIEW Package</displayName>
+    <description language="0009">Installs FRC updates for LabVIEW 8.6.1.  This only needs to be installed if you are using LabVIEW as your development environment for the FIRST Robotics Competition 2010.</description>
+  </displayFolder>
+
+  <displayFolder id="Required_Package">
+    <displayName language="0009">Platform-Independent Required Updates</displayName>
+    <description language="0009">Installs updates that are required for all FRC developers, regardless of which development package (LabVIEW, Wind River C++, Java) you are using.\n\nVision Assistant 2009 Hotfix\nVision Plugin for FRC\nCypress PSoC(R) Programmer\nFRC License</description>
+  </displayFolder>
+
+  <installOptionSet id="NoCustomInstall">
+    <installOption id="Custom" show="false"/>
+  </installOptionSet>
+
+  <supportFiles>
+    <metautilsMsm>Bin\niMetaUtils.msm</metautilsMsm>
+  </supportFiles>
+
+  <localization>
+    <supportedLanguage>0009</supportedLanguage>
+    <forceLanguage>0009</forceLanguage>
+    <customResFile language="0009">Bin\data0009.dll</customResFile>
+  </localization>
+
+  <customGraphic item="TopBar">
+    <bitmap>IDB_TOPSTRIP</bitmap>
+  </customGraphic>
+
+  <customGraphic item="FullScreen">
+    <bitmap>IDB_FULLSCREEN</bitmap>
+  </customGraphic>
+
+  <customText language="0009">
+    <string item="STR_GLOBAL_WINDOWTITLE">FRC 2010 Update Suite</string>
+    <string item="STR_INIT_WELCOME"></string>
+  </customText>
+
+  <OSRestriction>
+    <OSVersion OSFamily="VersionNT" max="" min="5,0,2195,3,0"/>
+    <OSVersion OSFamily="Version9X" max="" min="-1"/>
+  </OSRestriction>
+
+  <msiEngine requiredVersion="3.0.0.0">
+    <path OSFamily="WinNT">Bin\WindowsInstaller-KB893803-v2-x86.exe</path>
+    <commandLine>/passive /norestart</commandLine>
+  </msiEngine>
+
+  <PhoneHome>
+    <defaultState>1</defaultState>
+    <visible>1</visible>
+    <dllPath>Bin\</dllPath>
+  </PhoneHome>
+
+  <longestPath>106</longestPath>
+
+</suiteDefinition>
